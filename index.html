@@ -49,12 +49,13 @@
     .item {
       overflow: hidden;
       display: grid;
-      /* overlapping rule */
-      /* grid-template-columns: 1; 
-      grid-template-rows: 1;  */
+      /* use grid for overlapping rules instead of using position: absolute  */
+      grid-template-columns: 1; 
+      grid-template-rows: 1; 
     }
     
     .item img {
+      /* hack */
       grid-column: 1 / -1;
       grid-row: 1 / -1;
       height: 100%;
@@ -63,9 +64,10 @@
     }
 
     .item__overlay {
-      background: #ffc60032;
+      /* hack for making item overlay stay on stop of the actual item image */
       grid-column: 1 / -1;
       grid-row: 1 / -1;
+      background: #ffc60032;
       /* position: relative; */
       display: grid;
       justify-items: center;
@@ -119,7 +121,7 @@
       bottom: 0;
       left: 0;
       display: none;
-      z-index: 2;
+      /* z-index: 2; */
     }
 
     .overlay.open {

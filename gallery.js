@@ -41,5 +41,5 @@ items.forEach(item => item.addEventListener('click', handleClick));
 
 overlayClose.addEventListener('click', close);
     
-// The gallery has a lot of [1,1] blank spots. The way to fill all those spots is concat a bunch of new array of 100px height and width
+// The gallery has a lot of [1,1] blank spots. The way to fill all those spots is to concat a bunch of new array of 100px height and width
 // using concat([[1,1],[1,1],[1,1]])
